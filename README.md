@@ -1,7 +1,7 @@
 # qubes-nested-virtualization
 Nested virtualization in Qubes OS
 
-According the Qubes OS developers' team, Xen (preview) nested virtualization is not their priority because their focus is on security and stability of the operative system.
+According the Qubes OS developers' team, Xen (preview) nested virtualization is not their priority because their focus is on security and stability of the operative system ( https://github.com/QubesOS/qubes-issues/issues/4104#issuecomment-406080934 ).
 
 Anyway, if you need to develop Android Apps and you love to work with Qubes, you are probably stuck with the limitation that Google added on AVD since Android 8 that need Vt-x / Vt-d flags on to work.
 
