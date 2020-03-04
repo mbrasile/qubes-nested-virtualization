@@ -9,16 +9,12 @@ Luckily, since Qubes is open-source, it is possible to compile the Xen modules e
 
 in  /usr/share/qubes/templates/libvirt/xen.xml ( https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml ) just change
 
-<pre>
-<feature name='vmx' policy='disable'/>
-<feature name='svm' policy='disable'/>
-</pre>       
+feature name='vmx' policy='disable'/
+feature name='svm' policy='disable'/
 
 to
 
-<pre>
-<feature name='vmx' policy='enable'/>
-<feature name='svm' policy='enable'/>
-</pre>
+feature name='vmx' policy='enable'/
+feature name='svm' policy='enable'/
 
 ( ref. https://dev.qubes-os.org/projects/core-admin/en/latest/libvirt.html )
