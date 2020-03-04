@@ -21,4 +21,6 @@ to
 <feature name='svm' policy='enable'/>
 ```
 
+and rebuild the hypervisor ( make vmm-xen )
+
 ( ref. https://dev.qubes-os.org/projects/core-admin/en/latest/libvirt.html )
