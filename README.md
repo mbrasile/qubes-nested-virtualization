@@ -10,7 +10,6 @@ Luckily, since Qubes is open-source, it is possible to compile the Xen modules e
 in  /usr/share/qubes/templates/libvirt/xen.xml ( https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml ) just change
 
 <pre>
-<!-- disable nested HVM -->
 <feature name='vmx' policy='disable'/>
 <feature name='svm' policy='disable'/>
 </pre>       
@@ -18,7 +17,6 @@ in  /usr/share/qubes/templates/libvirt/xen.xml ( https://github.com/QubesOS/qube
 to
 
 <pre>
-<!-- enable nested HVM -->
 <feature name='vmx' policy='enable'/>
 <feature name='svm' policy='enable'/>
 </pre>
