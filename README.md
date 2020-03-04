@@ -7,7 +7,8 @@ Anyway, if you need to develop Android Apps and you love to work with Qubes, you
 
 Luckily, since Qubes is open-source, it is possible to compile the Xen modules enabling the preview options.
 
-in  /usr/share/qubes/templates/libvirt/xen.xml ( https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml ) just change
+in ./qubes-src/core-admin/templates/libvirt/xen.xml 
+( https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml ) just change
 
 ```html
 <feature name='vmx' policy='disable'/>
