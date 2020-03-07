@@ -14,34 +14,32 @@ hap=1
 nestedhvm=1
 ```
 
---
-Luckily, since Qubes is open-source, it is possible to compile the Xen modules enabling the preview options.
-
-in ./qubes-src/core-admin/templates/libvirt/xen.xml 
+~~Luckily, since Qubes is open-source, it is possible to compile the Xen modules enabling the preview options.
+~~
+~~in ./qubes-src/core-admin/templates/libvirt/xen.xml 
 ( https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml ) just change
 
-```html
-<feature name='vmx' policy='disable'/>
-<feature name='svm' policy='disable'/>
-```
+~~```html~~
+~~<feature name='vmx' policy='disable'/>~~
+~~<feature name='svm' policy='disable'/>~~
+~~```~~
 
-to
+~~to~~
 
-```html
-<feature name='vmx' policy='enable'/>
-<feature name='svm' policy='enable'/>
-```
+~~```html~~~~
+~~<feature nme='vmx' policy='enable'/>~~
+~~<feature name='svm' policy='enable'/>~~
+~~```~~
 
-and rebuild the libvirt ( make core-libvirt )
+~~and rebuild the libvirt ( make core-libvirt )~~
 
-( ref. https://dev.qubes-os.org/projects/core-admin/en/latest/libvirt.html )
+~~( ref. https://dev.qubes-os.org/projects/core-admin/en/latest/libvirt.html )~~
 
-after that, install the xen* RPMs in dom0:
+~~after that, install the xen* RPMs in dom0:~~
 
-```sh
-sudo rpm -i --force *.rpm
-```
---
+~~```sh~~
+~~sudo rpm -i --force *.rpm~~
+~~```~~
 
 to check the VT-d support just run:
 
