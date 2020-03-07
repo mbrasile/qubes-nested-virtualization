@@ -26,4 +26,10 @@ and rebuild the hypervisor ( make vmm-xen )
 
 ( ref. https://dev.qubes-os.org/projects/core-admin/en/latest/libvirt.html )
 
-after that, install the xen*e RPMs in dom0
+after that, install the xen* RPMs in dom0:
+
+# sudo rpm -i --force *.rpm
+
+to check the VT-d support just run:
+
+# sudo egrep ‘(vmx|svm)’ /proc/cpuinfo
