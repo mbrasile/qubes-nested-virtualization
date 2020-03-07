@@ -28,8 +28,12 @@ and rebuild the hypervisor ( make vmm-xen )
 
 after that, install the xen* RPMs in dom0:
 
-# sudo rpm -i --force *.rpm
+```sh
+sudo rpm -i --force *.rpm
+```
 
 to check the VT-d support just run:
 
-# sudo egrep ‘(vmx|svm)’ /proc/cpuinfo
+```sh
+sudo egrep ‘(vmx|svm)’ /proc/cpuinfo
+```
