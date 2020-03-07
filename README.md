@@ -14,7 +14,7 @@ hap=1
 nestedhvm=1
 ```
 
-~~~
+~~
 Luckily, since Qubes is open-source, it is possible to compile the Xen modules enabling the preview options.
 
 in ./qubes-src/core-admin/templates/libvirt/xen.xml 
@@ -41,7 +41,7 @@ after that, install the xen* RPMs in dom0:
 ```sh
 sudo rpm -i --force *.rpm
 ```
-~~~
+~~
 
 to check the VT-d support just run:
 
