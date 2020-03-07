@@ -7,6 +7,8 @@ Anyway, if you need to develop Android Apps and you love to work with Qubes, you
 
 1. enable nested virtualization
 
+( https://wiki.xenproject.org/wiki/Nested_Virtualization_in_Xen#Introduction )
+
 edit /boot/efi/EFI/qubes/xen.cfg (or /boot/grub2/grub.cfg) and add
 
 ```sh
