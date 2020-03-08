@@ -7,14 +7,37 @@ Anyway, if you need to develop Android Apps and you love to work with Qubes, you
 
 1. enable nested virtualization
 
-( https://wiki.xenproject.org/wiki/Nested_Virtualization_in_Xen#Introduction )
+~~( https://wiki.xenproject.org/wiki/Nested_Virtualization_in_Xen#Introduction )~~
+( https://fishilico.github.io/generic-config/sysadmin/qubes-os.html#nested-virtualization )
 
-edit /boot/efi/EFI/qubes/xen.cfg (or /boot/grub2/grub.cfg) and add
+Create /etc/qubes/templates/libvirt/xen/by-name/virtualizer.xml in dom0 with the following content (to extend https://github.com/QubesOS/qubes-core-admin/blob/master/templates/libvirt/xen.xml):
 
-```sh
-hap=1
-nestedhvm=1
-```
+~~~xml
+{% extends 'libvirt/xen.xml' %}
+{% block cpu %}
+    <cpu mode='host-passthrough'>
+        <feature name='vmx' policy='optional'/>
+        <feature name='svm' policy='optional'/>
+        <!-- disable SMAP inside VM, because of Linux bug -->
+        <feature name='smap' policy='disable'/>
+    </cpu>
+{% endblock %}
+{% block features %}
+    <pae/>
+    <acpi/>
+    <apic/>
+    <viridian/>
+    <hap/> <!-- enable Hardware Assisted Paging -->
+    <!-- <nestedvm/> -->
+{% endblock %}
+~~~
+
+~~edit /boot/efi/EFI/qubes/xen.cfg (or /boot/grub2/grub.cfg) and add~~
+
+~~```sh~~
+~~hap=1~~
+~~nestedhvm=1~~
+~~```~~
 
 ~~Luckily, since Qubes is open-source, it is possible to compile the Xen modules enabling the preview options.
 ~~
